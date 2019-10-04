@@ -12,6 +12,10 @@
     Access-Control-Allow-Origin = "*"
     
 [[headers]]
-  for = "*.*" # js files should be set this way
+  for = "*/assets/*" # js files should be set this way
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "*/*.apk" # js files should be set this way
   [headers.values]
     Cache-Control = "public, max-age=604800"
